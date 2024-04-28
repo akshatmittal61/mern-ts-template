@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 // function to implement a sleep function
 export const sleep = (seconds: number) =>
 	new Promise((resolve) => setTimeout(resolve, seconds * 1000));
@@ -115,4 +117,31 @@ export const sanitizeTimestampToDate = (timestamp: string) => {
 
 export const generateRandomColor = () => {
 	return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};
+
+// Notification utility based on toast
+export const notify: {
+	success: (_: string) => void;
+	error: (_: any) => void;
+	info: (_: string) => void;
+	warn: (_: string) => void;
+} = {
+	success: (message: string) => {
+		alert(message);
+	},
+	error: (error) => {
+		if (typeof error === "string") {
+			toast.error(error);
+		} else if (error.message && typeof error.message === "string") {
+			toast.error(error.message);
+		} else {
+			toast.error("An error occurred");
+		}
+	},
+	info: (message: string) => {
+		alert(message);
+	},
+	warn: (message: string) => {
+		alert(message);
+	},
 };

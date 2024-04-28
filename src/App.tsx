@@ -1,7 +1,8 @@
+import React from "react";
+import { Toaster } from "react-hot-toast";
+import { Route, Routes } from "react-router-dom";
 import routes from "./routes";
 import "./styles/globals.scss";
-import React from "react";
-import { Route, Routes } from "react-router-dom";
 
 const App: React.FC = () => {
 	return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
 					/>
 				))}
 			</Routes>
+			<Toaster position="top-center" />
 		</>
 	);
 };
