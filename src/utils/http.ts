@@ -1,8 +1,8 @@
 import axios from "axios";
-import { backendBaseUrl } from "../constants/variables";
+import { variables } from "../constants";
 
 const http = axios.create({
-	baseURL: backendBaseUrl,
+	baseURL: variables.backendBaseUrl,
 	headers: {
 		"Content-Type": "application/json",
 	},

@@ -1,9 +1,14 @@
 {
 	"name": "mern-ts-template",
 	"version": "0.1.0",
-	"private": true,
+	"main": "server.ts",
+	"repository": "https://github.com/akshatmittal61/mern-ts-template.git",
+	"author": "Akshat Mittal <akshatmittal2506@gmail.com>",
+	"license": "MIT",
+	"private": false,
 	"dependencies": {
 		"axios": "^1.6.8",
+		"express": "^4.19.2",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-hot-toast": "^2.4.1",
@@ -11,6 +16,9 @@
 		"react-scripts": "5.0.1"
 	},
 	"scripts": {
+		"start": "ts-node server.ts",
+		"server": "nodemon server.ts",
+		"dev": "concurrently \"yarn server\" \"yarn react\"",
 		"react": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
@@ -24,15 +32,17 @@
 		"@types/node": "^16.7.13",
 		"@types/react": "^18.0.0",
 		"@types/react-dom": "^18.0.0",
+		"concurrently": "^8.2.2",
 		"eslint": "^8.0.1",
+		"nodemon": "^3.1.0",
 		"prettier": "^3.2.5",
 		"sass": "^1.75.0",
+		"ts-node": "^10.9.2",
 		"typescript": "^4.4.2"
 	},
 	"eslintConfig": {
 		"extends": [
-			"react-app",
-			"react-app/jest"
+			"react-app"
 		]
 	},
 	"browserslist": {
