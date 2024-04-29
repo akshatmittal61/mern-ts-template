@@ -6,7 +6,6 @@ import { getString } from "../utils/safety";
 export const getAllBlogs = async (_: Request, res: Response) => {
 	try {
 		const allBlogs = await services.blogs.findAll();
-		console.log(allBlogs);
 		return res
 			.status(http.status.SUCCESS)
 			.json({ message: http.message.SUCCESS, data: allBlogs });
