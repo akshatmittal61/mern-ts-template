@@ -23,7 +23,7 @@ const nonProtectedRoutes = [
 				button={{
 					label: "Let's get you home",
 					action: () => {
-						console.log("Get me home");
+						alert("Get me home");
 					},
 				}}
 			/>

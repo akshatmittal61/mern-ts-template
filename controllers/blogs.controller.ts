@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { http } from "../constants/enum";
+import log from "../log";
 import services from "../services";
 import { getString } from "../utils/safety";
 
@@ -10,7 +11,7 @@ export const getAllBlogs = async (_: Request, res: Response) => {
 			.status(http.status.SUCCESS)
 			.json({ message: http.message.SUCCESS, data: allBlogs });
 	} catch (error: any) {
-		console.error(error);
+		log.error(error);
 		return res
 			.status(http.status.INTERNAL_SERVER_ERROR)
 			.json({ message: http.message.INTERNAL_SERVER_ERROR });
@@ -30,7 +31,7 @@ export const getBlogById = async (req: Request, res: Response) => {
 			.status(http.status.SUCCESS)
 			.json({ message: http.message.SUCCESS, data: blog });
 	} catch (error: any) {
-		console.error(error);
+		log.error(error);
 		return res
 			.status(http.status.INTERNAL_SERVER_ERROR)
 			.json({ message: http.message.INTERNAL_SERVER_ERROR });
@@ -46,7 +47,7 @@ export const createBlog = async (req: Request, res: Response) => {
 			.status(http.status.CREATED)
 			.json({ message: http.message.SUCCESS, data: blog });
 	} catch (error: any) {
-		console.error(error);
+		log.error(error);
 		return res
 			.status(http.status.INTERNAL_SERVER_ERROR)
 			.json({ message: http.message.INTERNAL_SERVER_ERROR });
@@ -63,7 +64,7 @@ export const updateBlog = async (req: Request, res: Response) => {
 			.status(http.status.SUCCESS)
 			.json({ message: http.message.SUCCESS, data: blog });
 	} catch (error: any) {
-		console.error(error);
+		log.error(error);
 		return res
 			.status(http.status.INTERNAL_SERVER_ERROR)
 			.json({ message: http.message.INTERNAL_SERVER_ERROR });
@@ -78,7 +79,7 @@ export const removeBlog = async (req: Request, res: Response) => {
 			.status(http.status.REMOVED)
 			.json({ message: http.message.SUCCESS, data: blog });
 	} catch (error: any) {
-		console.error(error);
+		log.error(error);
 		return res
 			.status(http.status.INTERNAL_SERVER_ERROR)
 			.json({ message: http.message.INTERNAL_SERVER_ERROR });

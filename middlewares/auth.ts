@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { http } from "../constants/enum";
+import log from "../log";
 
 export const isLoggedIn = (req: Request, res: Response, next: any) => {
 	try {
@@ -11,7 +12,7 @@ export const isLoggedIn = (req: Request, res: Response, next: any) => {
 		}
 		next();
 	} catch (error: any) {
-		console.error(error);
+		log.error(error);
 		return res
 			.status(http.status.UNAUTHORIZED)
 			.json({ message: http.message.UNAUTHORIZED });

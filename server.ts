@@ -1,7 +1,8 @@
 import express from "express";
 import { PORT } from "./config";
-import routes from "./routes";
 import { db } from "./db";
+import log from "./log";
+import routes from "./routes";
 
 const app = express();
 
@@ -16,5 +17,5 @@ app.use("/api/v1", routes);
 
 app.listen(PORT, () => {
 	db.connect();
-	console.info(`Server is listening at http://localhost:${PORT}`);
+	log.info(`Server is listening at http://localhost:${PORT}`);
 });
