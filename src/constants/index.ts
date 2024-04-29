@@ -1,3 +1,5 @@
+import regex from "./regex";
 import * as variables from "./variables";
 
-export { variables };
+export { regex, variables };
+
