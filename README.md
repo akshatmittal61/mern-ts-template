@@ -6,12 +6,12 @@ This template uses up the MVC architecture for better adoption of developers.
 
 ## Features
 
-- **MongoDB**: MongoDB is used as the database to store and manage application data.
-- **Express.js**: Express.js is used as the backend framework to handle HTTP requests and routes.
-- **React.js**: React.js is used for building dynamic user interfaces on the client side.
-- **Node.js**: Node.js is used as the server-side JavaScript runtime environment.
-- **TypeScript**: TypeScript is used to add static typing to JavaScript, providing enhanced code quality and developer productivity.
-- **ESLint & Prettier**: ESLint and Prettier are used for linting and code formatting to maintain code quality and consistency.
+-   **MongoDB**: MongoDB is used as the database to store and manage application data.
+-   **Express.js**: Express.js is used as the backend framework to handle HTTP requests and routes.
+-   **React.js**: React.js is used for building dynamic user interfaces on the client side.
+-   **Node.js**: Node.js is used as the server-side JavaScript runtime environment.
+-   **TypeScript**: TypeScript is used to add static typing to JavaScript, providing enhanced code quality and developer productivity.
+-   **ESLint & Prettier**: ESLint and Prettier are used for linting and code formatting to maintain code quality and consistency.
 
 ## Getting Started
 

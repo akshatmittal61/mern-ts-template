@@ -28,9 +28,12 @@
 		"eject": "react-scripts eject",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
-		"lint": "eslint --c .eslintrc.json . --ext .js,.jsx,.ts,.tsx"
+		"lint": "eslint --c .eslintrc.json . --ext .js,.jsx,.ts,.tsx",
+		"prepare": "husky"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^17.7.1",
+		"@commitlint/config-conventional": "^17.7.0",
 		"@types/jest": "^27.0.1",
 		"@types/node": "^16.7.13",
 		"@types/react": "^18.0.0",
