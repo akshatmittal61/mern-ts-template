@@ -15,26 +15,25 @@ This template uses up the MVC architecture for better adoption of developers.
 
 ## Getting Started
 
-To get started with the MERN Stack Template, follow these steps:
+Click on the `Use this template` button and generate your respository.
 
-1. **Clone the Repository**: Clone this repository to your local machine using `git clone`.
+1. **Clone the Repository**: Clone the repository to your local machine using `git clone`.
 
 ```bash
-git clone https://github.com/akshatmittal61/mern-ts-template.git
+git clone https://github.com/<username>/<repository>.git
 ```
 
 2. **Install Dependencies**: Navigate to the project directory and install dependencies for both the server and client.
 
 ```bash
-cd mern-ts-template
+cd <respository>
 yarn
 ```
 
-3. **Set Environment Variables**: Create a `.env` file in the root directory and set environment variables as specified in `[.env.example](./.env.example)`.
+3. **Set Environment Variables**: Create a `.env` file in the root directory and set environment variables as specified in [`.env.example`](./.env.example)`.
 
 ```env
 MONGODB_URI=mongodb://localhost:27017/my-database
-JWT_SECRET=mysecretkey
 ```
 
 4. **Run the Development Server**: Start the development server for both the server and client.
@@ -57,7 +56,7 @@ yarn server
 ```
 
 5. **Open in Browser**: Open your browser and navigate to `http://localhost:3000` to view the application.
-6. **Spin up backend server**: Open your HTTP client and use `http://localhost:4000` as the base url.
+6. **Spin up backend server**: Open your HTTP client and use `http://localhost:8000` as the base url.
 
 ## License
 
