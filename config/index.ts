@@ -43,7 +43,7 @@ export const PORT = (() => {
 	try {
 		return configService.getNumber("PORT");
 	} catch (error) {
-		return 5000;
+		return 8000;
 	}
 })();
 export const dbUri = configService.get("DB_URI");

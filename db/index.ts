@@ -29,7 +29,7 @@ export class DatabaseManager {
 				return err;
 			});
 
-		global.isConnected = db.connections[0].readyState === 1;
+		global.isConnected = db?.connections?.[0]?.readyState === 1 ?? false;
 	}
 }
 
