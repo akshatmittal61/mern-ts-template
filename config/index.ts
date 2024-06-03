@@ -33,17 +33,19 @@ class ConfigService {
 
 		return getBoolean(this.env[key]);
 	}
+
+	public safeGet<T>(extractor: () => T, fallback: T): T {
+		try {
+			return extractor();
+		} catch {
+			return fallback;
+		}
+	}
 }
 
 const configService = new ConfigService(process.env);
 
 export default configService;
 
-export const PORT = (() => {
-	try {
-		return configService.getNumber("PORT");
-	} catch (error) {
-		return 8000;
-	}
-})();
+export const PORT = configService.safeGet(() => getNumber("PORT"), 8000);
 export const dbUri = configService.get("DB_URI");
